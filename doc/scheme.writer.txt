@@ -1,0 +1,26 @@
+= Define the writer use Scheme as inner format.
+  * in fact is AST-tree -> Scheme
+  * And Scheme -> HTML | MarkDown ...
+
+= There has two part of the AST-tree
+  * the document's structure
+  * user's key input sequence
+  * each sequence corresponding to a AST-node, so that , other component can change the Render smoothly.
+
+
+[Node define] 
+
+  (text <the text value> )  -- each line corresponding a text node.
+  (paraph (text xxxx) (text xxxx) )
+  (title h1 (text <the title text> ))
+  (style stylename (text < the title text> )
+  (styledef stylename (font xxx ))
+  (layout 12 (column 2 (cons (text abc) (text cdef)))
+	     (column 10 xxx)
+   
+
+[In Text Editing Mode]
+
+  * You can change text style from popup panel & side-panel
+  * Allow anonymous style during text format.
+
