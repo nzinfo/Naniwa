@@ -9,8 +9,10 @@
 
 
 [Node define] 
-
-  (text <the text value> )  -- each line corresponding a text node.
+ 
+  (span <text> ) -- a text node with out \n
+  (text <the text value> )  -- each line corresponding one or more text node.
+  (line (text ... ) (span xxx) (text xxx)) 
   (paraph (text xxxx) (text xxxx) )
   (title h1 (text <the title text> ))
   (style stylename (text < the title text> )
@@ -23,4 +25,9 @@
 
   * You can change text style from popup panel & side-panel
   * Allow anonymous style during text format.
+
+
+[TODO]
+1. Define a document module
+2. regist commands via Commandant ( write by coffee script )
 

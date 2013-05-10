@@ -4,3 +4,6 @@
 [submodule "treehugger"]
 	path = treehugger
 	url = git@github.com:nzinfo/treehugger.git
+[submodule "commandant"]
+	path = commandant
+	url = git@github.com:nzinfo/commandant.git
