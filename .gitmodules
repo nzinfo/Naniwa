@@ -1,0 +1,3 @@
+[submodule "biwascheme"]
+	path = biwascheme
+	url = git@github.com:nzinfo/biwascheme.git
