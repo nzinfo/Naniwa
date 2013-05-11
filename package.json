@@ -9,8 +9,16 @@
   "repository" : {
     "type" : "git",
     "url" : "http://github.com/ajaxorg/treehugger.git" 
-  },  
-  "engines" : {
+  }
+  , "engines" : {
      "node" : ">= 0.4.0"
   }
+  , "dependencies": {  "async": ">=0.1.22"
+            , "coffee-script" : ">=1.0.1"
+            , "requirejs" : ">=0.27.1"
+            , "walkdir" : ">= 0.0.1"
+            , "underscore" : ">= 1.3.1"
+            , "shell": ""
+            , "redis":""
+        }
 }
