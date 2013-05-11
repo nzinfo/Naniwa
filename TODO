@@ -1,6 +1,12 @@
 [PREP]
-1. 测试 node_shell 是否支持批量命令
-2.
+1. [done] 测试 node_shell 是否支持批量命令
+2. 测试 node_shell 与 commandant 的集成
+    + 0nd parameter is the scope, this, self, whatever, this case, self is the ast-tree.
+    + treat req.param as the 1st param
+    + bind command string -> command ID
+    + pass response as a attribute of ast-tree.
+    + test async command.
+
 
 [TODO]
 1. Define a document module
