@@ -1,11 +1,13 @@
 [PREP]
 1. [done] 测试 node_shell 是否支持批量命令
-2. 测试 node_shell 与 commandant 的集成
+2. [done] 测试 node_shell 与 commandant 的集成
     + 0nd parameter is the scope, this, self, whatever, this case, self is the ast-tree.
     + treat req.param as the 1st param
     + bind command string -> command ID
     + pass response as a attribute of ast-tree.
     + test async command.
+
+3. 在页面中实现命令输入
 
 
 [TODO]

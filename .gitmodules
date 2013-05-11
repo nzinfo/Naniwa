@@ -7,3 +7,6 @@
 [submodule "commandant"]
 	path = commandant
 	url = git@github.com:nzinfo/commandant.git
+[submodule "jq-console"]
+	path = jq-console
+	url = git@github.com:nzinfo/jq-console.git
