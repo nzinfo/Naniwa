@@ -14,3 +14,14 @@
 1. Define a document module
 2. regist commands via Commandant ( write by coffee script )
 
+
+[IDEA]
+1. It's good that port node-shell to browse env. But due to there're too many way of making a response @browse. so that, it's a silly idea.
+   But port the command parser still is better to have.
+
+[ISSUE]
+< jq-console>
+    已经足够好了。
+    1. 工作的不太稳定，偶尔中文无法输入
+    2. 无法复制 | 粘贴 （ jquery.terminal 可以 ）
+

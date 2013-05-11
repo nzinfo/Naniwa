@@ -1,2 +1,114 @@
 The definition of text processing commands.
 
+>>> There is one ruler, one king.
+
+We have a AST-tree represent a document. And a document might or may not have multi virtual render. eg.
+
+   Tree:
+    - MarkDown View
+    - Render View
+    - Print View...
+
+
+============ Text Input & Editing =============
+[Cursor]
+
+  - One can define multi cursor each time, for he might operate text on multi virtual renders.
+  - Each cursor an be attached annotations.
+  - There is a default(main) cursor.
+  - You can use this interface operate cursors.
+
+[Key Press]
+  - Each time the content changed, a key press fired.
+  - Add | Remove are both key-press event.
+
+
+
+[Undo|Redo]
+  - Commandant provide a framework.
+
+============ Line Base Object   ===============
+[ Font ]
+    - font family
+    - font size
+    - font fore-color | background-color
+    - font Italic | Bold
+    - up-script | low-script
+    - delete style | underline
+    - orient
+
+[ SPAN ]
+  - The mini element of the editing system.
+
+[Line]
+  - When need create a new line.
+  - Line Begin & Line End. (Two marker a line.)
+
+[ Paragraph ]
+    - Each Paragraph have one or more Lines.
+
+[ Block ]
+    - Each Block have one or more Paragraph.
+    - Block have many types.
+        * Text | Table | Image | Drawing | Formula
+        * One can extend Block type by plugins.
+
+[ Layout ]
+    - Each Layout Element have one or more Block.
+    - Layout Engine borrowed from twitter bootstrap.
+
+[ Layer ]
+    - Before text editing layer, one can create mult layer,
+    - Addtional layer are absolute position.
+
+[ Sequence ]
+    - Define the sequence for bulletins.
+    - Auto-inc value..
+    - Sequence have multi style.
+
+[ Style ]
+    - Apply style to editable elements ( span line paragraph block )
+
+[ Style Format ]
+    + Font
+    + padding
+    + Alignment
+
+[ Style Define|Apply ]
+    - Use as the interface create | list | remove | modify pre-defined style.
+
+============== Block Base Object ==============
+[ Table ]
+    - Row & Columns
+    - Border
+    - Alignment
+
+[ Image | Embed ]
+    - Source
+    - Filter
+    - Border
+    - Annotate
+    - Title
+    - TItle Position
+    ( Title is a small block adhere to Image)
+
+[ Drawing ]
+    - vector drawing..
+
+[ Formula ]
+    - use math-ajax convert math formula into html
+
+
+============== Page Based Object ==============
+[ Header & Foot ]
+
+[ Quotation ]
+
+[ Page Padding ]
+
+[ Page Size & Orient ]
+
+[ Page Ground ]
+
+------------------------------------------------------------------------------------------------------------------------
+The end of file.
