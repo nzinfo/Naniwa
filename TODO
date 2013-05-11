@@ -1,0 +1,8 @@
+[PREP]
+1. 测试 node_shell 是否支持批量命令
+2.
+
+[TODO]
+1. Define a document module
+2. regist commands via Commandant ( write by coffee script )
+

@@ -61,4 +61,9 @@ app.on('quit', function(){
     // app.client.quit();
     console.log('quiting.');
 });
+
+/* execute a command manually.  */
+
+app.run('user 501');
+
 /* end of file */

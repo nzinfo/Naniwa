@@ -27,7 +27,5 @@
   * Allow anonymous style during text format.
 
 
-[TODO]
-1. Define a document module
-2. regist commands via Commandant ( write by coffee script )
+
 
