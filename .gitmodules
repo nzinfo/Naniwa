@@ -10,3 +10,12 @@
 [submodule "jq-console"]
 	path = jq-console
 	url = git@github.com:nzinfo/jq-console.git
+[submodule "IndexedDBShim"]
+	path = IndexedDBShim
+	url = git@github.com:nzinfo/IndexedDBShim.git
+[submodule "ueditor"]
+	path = ueditor
+	url = git@github.com:nzinfo/ueditor.git
+[submodule "plv8"]
+	path = plv8
+	url = git@github.com:nzinfo/plv8.git

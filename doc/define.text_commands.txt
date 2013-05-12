@@ -5,10 +5,30 @@ The definition of text processing commands.
 We have a AST-tree represent a document. And a document might or may not have multi virtual render. eg.
 
    Tree:
+
     - MarkDown View
     - Render View
     - Print View...
 
+Every Node has a auto-inc type-based element id.
+
+Default document is a Layout with 12 column filled with a Single Block, And the Block （ Text Block )  has a single line.
+
+We use the following node building the AST-tree.
+
+exports.ConsNode = ConsNode; // -> the mainly build node.
+exports.ListNode = ListNode; // -> fix it with a cons? a cons with a list ?
+exports.NumNode = NumNode;   // skip.
+exports.StringNode = StringNode; // -> the span
+exports.PlaceholderNode = PlaceholderNode; // -> cursor ?
+
+/*
+        var nodePos = this.getAnnotation("pos");
+        pos = {sl : nodePos.sl,
+               sc : nodePos.sc,
+               el : nodePos.el,
+               ec : nodePos.ec};
+*/
 
 ============ Text Input & Editing =============
 [Cursor]
@@ -21,8 +41,6 @@ We have a AST-tree represent a document. And a document might or may not have mu
 [Key Press]
   - Each time the content changed, a key press fired.
   - Add | Remove are both key-press event.
-
-
 
 [Undo|Redo]
   - Commandant provide a framework.
@@ -39,10 +57,23 @@ We have a AST-tree represent a document. And a document might or may not have mu
 
 [ SPAN ]
   - The mini element of the editing system.
+    + create span [ lid : line id ] [ start : span create from which char-position :: int ] < end :: int > :->
+        @ spanid
+      :: if span can be reused, just return the old one.
+      :: if `end` not given, -> the end of the line.
 
 [Line]
   - When need create a new line.
   - Line Begin & Line End. (Two marker a line.)
+
+  = Create Line:
+    + create line < pid : paragraph id > < lid : line id > :->
+        @lineid
+      :: create line & set cursor are two different command. But in normal GUI editor, the two command usually combined in one group.
+      :: if `pid` not assigned, create line at current cursor's Paragraph ( or the last cursor appeared para ).
+      :: if `lid` is give, create line right before it.
+         if not, create line after the last line in the para.
+      :: line automatic create a span, used for text input.
 
 [ Paragraph ]
     - Each Paragraph have one or more Lines.
@@ -109,6 +140,13 @@ We have a AST-tree represent a document. And a document might or may not have mu
 [ Page Size & Orient ]
 
 [ Page Ground ]
+
+============== Utility ========================
+[ Dump ]
+    - Dump the AST-tree into a JSON format.
+
+[ Load ]
+    - Load the AST-tree from a JSON format.
 
 ------------------------------------------------------------------------------------------------------------------------
 The end of file.

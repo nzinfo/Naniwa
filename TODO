@@ -1,5 +1,6 @@
 [PREP]
 1. [done] 测试 node_shell 是否支持批量命令
+
 2. [done] 测试 node_shell 与 commandant 的集成
     + 0nd parameter is the scope, this, self, whatever, this case, self is the ast-tree.
     + treat req.param as the 1st param
@@ -7,13 +8,23 @@
     + pass response as a attribute of ast-tree.
     + test async command.
 
-3. 在页面中实现命令输入
+3. [done] 在页面中实现命令输入 -> port from jqconsole. strip repsonse.
 
+4. Port IndexedDBShim 's qunit based unit test cases into node.
+
+5. [part done, verify test failure. ] re-impl IndexedDBShim via Sqlite
+    -> There has a sqlite base impl! https://github.com/axemclion/IndexedDBShim/pull/57
+    -> sqlite must use at a special version...
+
+6. re-impl IndexedDBShim via PostgreSQL
+    -> We can use directIndex via PostgreSQL, IntIndex & StringIndex Column is quit stupid.
+    -> create db = create scheme.
+    -> depends on node.js v8
 
 [TODO]
-1. Define a document module
-2. regist commands via Commandant ( write by coffee script )
-
+1. Define a document AST
+2. [done] regist commands via Commandant
+3. import http://aaronpowell.github.io/db.js/, this lib make operate on IndexedDB quite easy.
 
 [IDEA]
 1. It's good that port node-shell to browse env. But due to there're too many way of making a response @browse. so that, it's a silly idea.
