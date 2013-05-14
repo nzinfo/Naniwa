@@ -19,3 +19,6 @@
 [submodule "plv8"]
 	path = plv8
 	url = git@github.com:nzinfo/plv8.git
+[submodule "ace"]
+	path = ace
+	url = git@github.com:nzinfo/ace.git
